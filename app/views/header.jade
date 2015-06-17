@@ -1,0 +1,25 @@
+.header
+    .header-content
+        .header-logo
+          a(href='./')
+            img(src='/images/marca-gerencianet.png')
+        .header-menu
+          .menu
+            ul
+              li(class=indexClass)
+                a(href='/') HOME
+              li
+                a(href='#') DESTAQUES
+              li
+                a(href='#') VITRINE
+              li
+                a(href='http://blog.gerencianet.com.br', target='_blank') BLOG
+              li
+                a(href='', target='_blank')
+                  i.fa.fa-github
+                  |  GITHUB
+              li(class=cartClass)
+                a(href='/carrinho')
+                  | CARRINHO
+                  .qtde-products.text-bold= totalProducts
+    .header-banner

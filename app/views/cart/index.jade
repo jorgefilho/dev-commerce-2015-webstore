@@ -1,0 +1,25 @@
+extends ../layout
+
+block content
+  .cart
+    .cart-content
+      h1 CARRINHO
+      br
+      .warning-message
+        p
+          | Esta lojinha é somente um exemplo de implementação do checkout transparente. Com isso, os produtos apresentados são apenas de exemplo.
+        p
+          | Como esta lojinha está utilizando credenciais de desenvolvimento, não serão realizados lançamentos na fatura do seu cartão de crédito.
+      .overview.cbox
+        .title Resumo da compra
+        .clear.columns
+          .pull-left.column-51 Itens
+          .pull-left.column-15.text-center Quantidade
+          .pull-left.column-15.text-center Valor
+          .pull-right.column-15.text-center Total (R$)
+        .itens-list
+          - each item, index in cart
+            include item-cart
+
+        include info
+    include also-seen

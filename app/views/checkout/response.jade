@@ -1,0 +1,10 @@
+extends ../layout
+
+block content
+  .checkout
+    .confirmation.text-bold
+      img.success(src='images/icon-success.png')
+      .color-green Requisição efetuada
+        div.response
+          h2 Resposta do servidor:
+          pre= response

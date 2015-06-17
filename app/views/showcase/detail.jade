@@ -1,0 +1,56 @@
+extends ../layout
+
+block content
+  .product-selected
+      .path.color-gray
+        a.color-gray(href='./') INÍCIO
+        |  >> Boné Gerencianet Verde
+      .divider
+      .clear
+        .pull-left.image
+          img(src='/images/products/' + product.image)
+        .pull-left.information
+          p.text-bold= product.description
+          p.text-bold.color-orange= 'R$ ' + product.price
+          .button.text-bold
+            a(href='/add/' + product.id + '/1') EU QUERO!
+          .favorite
+            img(src='/images/icons-favorite.png')
+      .additional-information
+        .title INFORMAÇÕES ADICIONAIS
+        table
+          tbody
+            tr
+              td.column1 CÓDIGO DO PRODUTO
+              td.text-bold= product.id
+            tr
+              td.column1 MATERIAL
+              td.text-bold= product.material
+            tr
+              td.column1 COR
+              td.text-bold= product.color
+            tr
+              td.column1 MARCA
+              td.text-bold Gerencianet
+            tr
+              td.column1 PESO
+              td.text-bold= product.weight
+            tr
+              td.column1 CATEGORIA
+              td.text-bold= product.category
+
+    .messages.clear.text-italic
+      .content
+        .pull-left.list
+          p.text-bold.title VENDA MAIS E RECEBA COM QUALIDADE
+          p
+            | Com a Gerencianet, seus clientes podem pagar com cartão de crédito ou boleto de qualquer lugar, e você recebe mais rápido.
+        .pull-left.list
+          p.text-bold.title DEIXE SEU SITE TRABALHAR POR VOCÊ
+          p
+            | Automatize as etapas de pagamento, integrando seu site ao nosso sistema, e receba de seus clientes de forma rápida e segura.
+        .pull-left.list
+          p.text-bold.title MELHOR JEITO DE COMPRAR
+          p Utilize a Gerencianet para fazer pagamentos.
+          p
+            | Seus dados são protegidos e você recebe seu dinheiro de volta caso tenha problemas com a entrega do produto ou serviço.

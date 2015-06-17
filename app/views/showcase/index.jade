@@ -1,0 +1,29 @@
+extends ../layout
+
+block content
+  .container
+    .showcase
+      h1(class='color-green') VITRINE
+      - each product, index in products
+        include product
+        - if((index + 1) % 4 === 0)
+          .divider
+      .divider
+    .informations
+      a.link.color-green(href='') PREÇO
+      a.link.color-green.text-bold(href='') NOVIDADES
+      a.link.color-green(href='') MAIS VENDIDOS
+      a.link.color-green(href='') MAIS VISTOS
+      label.results-per-page
+        | Exibir
+        select(disabled='')
+          option(value='20') 20
+        |           registros por página
+      label.change-pages
+        input.large-button.disabled.color-gray(type='text', value='<< Primeiro', disabled='')
+        input.small-button.disabled.color-gray(type='text', value='<', disabled='')
+        input.small-button.selected.color-green(type='text', value='1', disabled='')
+        input.small-button.enabled.color-green(type='text', value='2', disabled='')
+        input.small-button.enabled.color-green(type='text', value='3', disabled='')
+        input.small-button.enabled.color-green(type='text', value='>', disabled='')
+        input.large-button.enabled.color-green(type='text', value='Último >>', disabled='')

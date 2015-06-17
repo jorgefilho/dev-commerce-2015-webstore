@@ -1,0 +1,11 @@
+.product-box
+  a(href='produto/' + product.id)
+    img.product-img(src='images/products/' + product.image)
+  .clear
+    .pull-left.product-info
+      .product-description= product.description
+      .product-price= 'R$ ' + product.price
+    .pull-right
+      .product-color.div(class='prod-' + product.id)
+  .product-buy-btn
+    a(href='/add/' + product.id + '/1') COMPRAR

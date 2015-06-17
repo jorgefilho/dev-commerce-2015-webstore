@@ -1,0 +1,15 @@
+.item-box.clear
+  .pull-left.column-51
+    a(href='./produto/' + item.id)= item.description
+  .pull-left.column-16.text-center
+    div
+      .change-qty-link
+        a(href='./update/' + item.id + '/' + (parseInt(item.amount) - 1))
+          img(src='./images/arrow-down.png')
+      input.input-qty(type='text', disabled='disabled', value=item.amount)
+      .change-qty-link
+        a(href='./update/' + item.id + '/' + (parseInt(item.amount) + 1))
+          img(src='./images/arrow-up.png')
+    a.remove(href='./update/' + item.id + '/0') Remover
+  .pull-left.column-16.text-center= 'R$ ' + item.price
+  .pull-left.column-16.text-right.text-bold= 'R$ ' + (item.price * item.amount)

@@ -1,0 +1,13 @@
+extends ../layout
+
+block append head
+  <script type='text/javascript'>var s=document.createElement('script');s.type='text/javascript';var v=parseInt(Math.random()*1000000);s.src='https://sandbox.gerencianet.com.br/cdn/23421_143160/'+v;s.async=false;s.id='23421_143160';if(!document.getElementById('23421_143160')){document.getElementsByTagName('head')[0].appendChild(s);};$gn={validForm:true,processed:false,done:{},ready:function(fn){$gn.done=fn;}};</script>
+  script(src='./javascript/pay.js')
+
+block content
+  .checkout
+    include summary
+    include payment-form
+    .checkout-footer.clear
+      .checkout-security.pull-left
+        img(src='images/security.png')

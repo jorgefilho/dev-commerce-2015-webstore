@@ -1,0 +1,11 @@
+.checkout-user-form
+  .clear
+    .checkout-pass.pull-left
+      i.fa.fa-dollar
+    .pull-left
+      h2 Pagamento
+  .clear
+    form(action='/billet' class="pull-left" method='post')
+      input(class='checkout-finalize-button', type='submit' value='Boleto')
+    form(action='/card' method='post' id='card-form')
+      input(class='checkout-finalize-button', type='submit' value='Cartão' id="card-button")

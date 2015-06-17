@@ -1,0 +1,15 @@
+h1.color-green EFETUAR PAGAMENTO
+  .checkout-user-form
+    h2 Resumo da compra
+      table.table
+        tbody
+          tr.text-bold.text-center
+            td.column Quantidade de Itens
+            td.column Valor dos Itens
+            td.column Valores Adicionais
+            td.column Valor Total
+          tr.text-center
+            td.column= totalAmount
+            td.column= 'R$ ' + totalItensValue
+            td.column= 'R$ ' + additional
+            td.column= 'R$ ' + total
