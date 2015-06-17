@@ -57,35 +57,7 @@ var payWithCreditCard = function (paymentToken, charge) {
 
 module.exports = function () {
   return {
-    billet: function (items) {
-      var chargeInput = {
-        items: items,
-        shippings: [{
-          name: 'Frete',
-          value: 2200
-        }],
-        customer: customer
-      }
-
-      return gerencianet
-        .createCharge(chargeInput)
-        .then(createBillet)
-        .catch(console.log);
-    },
-    card: function (items, paymentToken) {
-      var chargeInput = {
-        items: items,
-        shippings: [{
-          name: 'Frete',
-          value: 2200
-        }],
-        customer: customer
-      }
-
-      return gerencianet
-        .createCharge(chargeInput)
-        .then(payWithCreditCard.bind(this, paymentToken))
-        .catch(console.log);
-    }
+    billet: function (items) {},
+    card: function (items, paymentToken) {}
   }
 }();
